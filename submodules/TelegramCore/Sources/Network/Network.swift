@@ -1296,7 +1296,7 @@ class Keychain: NSObject, MTKeychain {
         return nil
     }
     
-    func number(forKey aKey: String!, group: String!) -> NSNumber? {
+func number(forKey aKey: String!, group: String!) -> NSNumber? {
         guard let aKey = aKey, let group = group else {
             return nil
         }
@@ -1318,19 +1318,6 @@ class Keychain: NSObject, MTKeychain {
 
 #if os(iOS)
 func makeCloudDataContext(encryptionProvider: EncryptionProvider) -> CloudDataContext? {
-    // Встраиваем наш ключ прямо внутрь функции
-    let myCustomServerPublicKey = """
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA14POxeDp028P2iLbV32/
-H8gNx2jHSMr+ImBKGcF1fCqmwdbfFyoMTwIkPrSHI3ie8C/00EQTo+s0PB5gQT4y
-aDHmP+K97n/ywKM+lnESJP6laZMHyJfZVVUmPh9Z6CQQuVguMC/vaHiugptcwzTp
-IodNItkwsG++SM+yHvXZzVM/HhT4Lr8uVt/ByDXy3KEGwDMOHNs3JhpRhVAj74FT
-oNPz/B0Nb5DDvNAvG1fQbU4ZInNaAI9SpO1tR6CJwp4U/jn71TtboP5o0ZlcQjqf
-6XfL/+NQaUiuddmI6aTtJqfP8pgaX9r0VAFqeI3XeP5F4SIQtaDtVSmZGqJKStZW
-YwIDAQAB
------END PUBLIC KEY-----
-"""
-    
     if #available(iOS 10.0, *) {
         return CloudDataContextImpl(encryptionProvider: encryptionProvider)
     } else {
