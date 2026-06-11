@@ -10,5 +10,12 @@
 	"app_specific_url_scheme": "tg",
 	"premium_iap_product_id": "org.telegram.telegramPremium.monthly",
 	"enable_siri": true,
-	"enable_icloud": true
+	"enable_icloud": true,
+	"sg_config": {
+		"custom_dc": {
+			"ip": "188.243.95.83",
+			"port": 443,
+			"public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA14POxeDp028P2iLbV32/\nH8gNx2jHSMr+ImBKGcF1fCqmwdbfFyoMTwIkPrSHI3ie8C/00EQTo+s0PB5gQT4y\naDHmP+K97n/ywKM+lnESJP6laZMHyJfZVVUmPh9Z6CQQuVguMC/vaHiugptcwzTp\nIodNItkwsG++SM+yHvXZzVM/HhT4Lr8uVt/ByDXy3KEGwDMOHNs3JhpRhVAj74FT\noNPz/B0Nb5DDvNAvG1fQbU4ZInNaAI9SpO1tR6CJwp4U/jn71TtboP5o0ZlcQjqf\n6XfL/+NQaUiuddmI6aTtJqfP8pgaX9r0VAFqeI3XeP5F4SIQtaDtVSmZGqJKStZW\nYwIDAQAB\n-----END PUBLIC KEY-----"
+		}
+	}
 }
